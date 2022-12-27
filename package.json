@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "seed": "node ./seeds/presents.seed.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
