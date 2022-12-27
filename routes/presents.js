@@ -12,4 +12,16 @@ router.get ("/", async (req,res,next) => {
   }
 })
 
+/* GET one present */
+/* ROUTE /presents/:presentId */
+router.get ("/:presentId", async (req,res,next) => {
+  const { presentId } = req.params;
+  try {
+    const present = await Present.findById(presentId);
+    res.render("presentDetails", { present });
+  } catch (error) {
+    next(error);
+  }
+})
+
 module.exports = router;

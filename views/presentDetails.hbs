@@ -1,0 +1,22 @@
+<body id="presents-bg">
+  <header>
+    <nav id="nav-bar">
+      <a href="/presents">← Go back to List</a>
+    </nav>
+  </header>
+  <div>
+    {{#with present}}
+      <div class="present-card-expanded">
+        <div class="card-expanded-container-present">
+          <img height="350" src="{{image}}" alt="{{name}}"/>
+        </div>  
+        <div class="card-container">
+          <h2>{{name}}</h2>
+          <p>Recipient:<br>{{recipient}}</p>
+          <p>Price:<br>{{price}}</p>
+          <p>Description:<br>{{description}}</p>
+        </div>
+     </div>
+    {{/with}} 
+  </div>
+</body>
