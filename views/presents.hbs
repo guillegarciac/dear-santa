@@ -1,0 +1,15 @@
+<body id="presents-bg">
+  <header>
+    <nav id="nav-bar">
+      <a href="/">← Go back to Home</a>
+    </nav>
+  </header>
+  <div id="presents-main">
+    <h1>Presents</h1>
+  </div>
+  <div>
+    {{#each presents}}
+      {{>presentPartial this}}
+    {{/each}}
+  </div>
+</body>
