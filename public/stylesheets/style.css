@@ -12,9 +12,8 @@ body#home-bg {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 48vh;
-  display: flex;
-  justify-content: center;
+  padding: 30vh;
+  zoom: 1.4;
 }
 
 #menu-container {
@@ -189,5 +188,6 @@ header nav a {
 #footer a{
   font-size: 2vh;
   text-decoration: none;
-  color: rgb(74, 18, 18);
+  color: rgb(99, 18, 18);
+  font-size: 30px;
 }
