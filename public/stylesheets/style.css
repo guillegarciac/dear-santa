@@ -199,20 +199,21 @@ p#not-found {
 header nav#nav-bar {
   width: 100%;
   height: 6.3vh;
-  background-color: white;
+  background-color: darkred;
   display: flex;
   justify-content: space-between;
   align-items: center;  
   position: fixed;
   border-bottom: 0.1px solid #7e7d7d;
   top: 0;
+  left: 0;
   z-index: 100;
 }
 
 header nav a {
   font-size: 2vh;
   text-decoration: none;
-  color: #1A1A1A;
+  color: white;
 } 
 
 #footer {

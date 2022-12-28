@@ -1,7 +1,7 @@
 <body id="presents-bg">
   <header>
     <nav id="nav-bar">
-      <a href="/presents">← Go back to List</a>
+      <a href="/presents/#presents-main">← Go back to List</a>
     </nav>
   </header>
   <h3>Results for: {{query}}</h3>
@@ -17,13 +17,16 @@
             <p>Price:<br>{{price}}</p>
             <p>Recipient:<br>{{recipient}}</p>
             <p>Description:<br>{{description}}</p>
+            <div id="button-see-more">
+              <a href="/presents/delete/{{_id}}">Delete Present</a>
+            </div>
           </div>
         </div>
      {{/with}}
      {{else}}
-      <div class="present-card">
-        <div class="card-container-present">
-          <img height="250" src="/images/not-found.png" alt="not-found"/>
+      <div class="present-card-expanded">
+        <div class="card-expanded-container-present">
+          <img height="350" src="/images/santa.jpg" alt="not-found"/>
         </div>  
         <div class="card-container">
           <h2>Oops!<br>No presents found for:</h2>
