@@ -6,6 +6,11 @@
   </header>
   <div id="presents-main">
     <h1>Presents</h1>
+    <form method="GET" action="/presents/search"> 
+      <label>Search by present name</label>
+      <input type="text" name="name"/>
+      <button type="submit">Search</button>
+    </form>
     <form method="POST" action="/presents/new">
       <label>Present's name</label>
       <input required type="text" name="name" placeholder="2K23"/>

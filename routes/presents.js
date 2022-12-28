@@ -12,6 +12,18 @@ router.get ("/", async (req,res,next) => {
   }
 })
 
+/* GET search results */
+/* ROUTE /presents/search */
+router.get('/search', async function (req, res, next) {
+  const { name } = req.query;
+  try {
+    const present = await Present.findOne({ name: name });
+    res.render('search', { query: name, present: present });
+  } catch (error) {
+    next(error)
+  }
+});
+
 /* GET form view */
 /* ROUTE /presents/new */
 router.get('/new', function (req, res, next) {
