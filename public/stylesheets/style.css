@@ -1,8 +1,171 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Font and General Elements */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* HOME PAGE */
+body#home-bg {
+  background: url(../images/christmas.gif) fixed no-repeat;
+  background-size: 100%;
 }
+
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  float: right;
+  margin-top: 115px;
+}
+
+a#home-button {
+  color: #4f0a1d;
+  background-color: rgba(255, 255, 255, 0.528);
+  padding: 0px 25px;
+  border-radius: 50px;
+  font-size: 2rem;
+  text-decoration: none;
+  width: fit-content;
+}
+
+/* presents PAGE */
+body#presents-bg {
+  background-color: white;
+}
+
+#presents-main {
+  display: block;
+  text-align: center;
+}
+
+#presents-main h1 {
+  color: #000;
+  margin: auto;
+  width: max-content;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+#presents-main p {
+  margin-bottom: 20px;
+}
+
+/* presents CARDS */
+.present-card {
+  width: 75%;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
+  padding: 22px;
+  border-radius: 25px;
+  height: 280px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.present-card:first-child {
+  margin-top: 75px;
+  }
+  
+.present-card:last-child {
+margin-bottom: 75px;
+}
+
+.present-card-expanded {
+  width: 75%;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
+  padding: 22px;
+  border-radius: 25px;
+  height: 400px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.present-card-expanded:first-child {
+margin-top: 75px;
+}
+
+.present-card-expanded:last-child {
+margin-bottom: 75px;
+}
+
+.present-card > img {
+display: block;
+margin: 0px 25px;
+}
+
+.present-card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-container-present {
+margin-top: 15px;
+padding: 0px 40px;
+width: 15vw;
+display: flex;
+justify-content: center;
+}
+
+.card-container {
+padding: 0px 40px;
+width: 85vw;
+}
+
+.card-container > h2 {
+font-size: 30px;
+}
+
+.card-container > p {
+margin-top: 25px;
+font-size: 16px;
+}
+
+/* SEE MORE BUTTONS */
+#button-see-more {
+  display: block;
+}
+
+#button-see-more > a {
+  background: #20c3a9;
+  color: #fff;
+  padding: 15px 0px;
+  margin-top: 40px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  width: 150px;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+p#not-found {
+  margin-top: 100px;
+}
+
+/* Back Navigation */
+
+header nav#nav-bar {
+  width: 100%;
+  height: 6.3vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  position: fixed;
+  border-bottom: 0.1px solid #7e7d7d;
+  top: 0;
+  z-index: 100;
+}
+
+header nav a {
+  font-size: 2vh;
+  text-decoration: none;
+  color: #1A1A1A;
+} 
