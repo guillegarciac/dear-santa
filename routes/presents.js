@@ -12,6 +12,24 @@ router.get ("/", async (req,res,next) => {
   }
 })
 
+/* GET form view */
+/* ROUTE /presents/new */
+router.get('/new', function (req, res, next) {
+  res.render('newPresent');
+});
+
+/* POST get users present inputs */
+/* ROUTE /presents/new */
+router.post('/new', async function (req, res, next) {
+  const { name, price, recipient, image, description } = req.body;
+  try {
+    const createdPresent = await Present.create({ name, price, recipient, image, description });
+    res.redirect(`/presents/${createdPresent._id}`);
+  } catch (error) {
+    next(error)
+  }
+});
+
 /* GET one present */
 /* ROUTE /presents/:presentId */
 router.get ("/:presentId", async (req,res,next) => {

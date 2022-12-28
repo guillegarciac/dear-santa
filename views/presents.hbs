@@ -6,6 +6,17 @@
   </header>
   <div id="presents-main">
     <h1>Presents</h1>
+    <form method="POST" action="/presents/new">
+      <label>Present's name</label>
+      <input required type="text" name="name" placeholder="2K23"/>
+      <label>Present's price</label>
+      <input required type="number" name="price" placeholder="60"/>
+      <label>Present's picture</label>
+      <input required type="text" name="image" placeholder="https://"/>
+      <label>What's this present about?</label>
+      <textarea required name="description"></textarea>
+      <button type="submit">Add Present</button>
+    </form>
   </div>
   <div>
     {{#each presents}}
