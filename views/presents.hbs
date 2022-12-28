@@ -5,25 +5,38 @@
     </nav>
   </header>
   <div id="presents-main">
-    <h1>Presents</h1>
-    <form method="GET" action="/presents/search"> 
-      <label>Search by present name</label>
-      <input type="text" name="name"/>
-      <button type="submit">Search</button>
-    </form>
-    <form method="POST" action="/presents/new">
-      <label>Present's name</label>
-      <input required type="text" name="name" placeholder="2K23"/>
-      <label>Present's price</label>
-      <input required type="number" name="price" placeholder="60"/>
-      <label>Present's picture</label>
-      <input required type="text" name="image" placeholder="https://"/>
-      <label>What's this present about?</label>
-      <textarea required name="description"></textarea>
-      <button type="submit">Add Present</button>
-    </form>
+    <div class="presents-form">
+      <div class="form">
+        <form method="GET" action="/presents/search"> 
+          <h2>Search by present name</h2>
+          <label>Type the exact present name</label>
+          <input type="text" name="name"/>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <img height="350" src="../images/presents.jpg" alt="presents"/>
+    </div>
+    <div class="presents-form">
+      <div class="form">
+        <h2>Add a present to the list</h2>
+          <form method="POST" action="/presents/new">
+            <label>Present's name</label>
+            <input required type="text" name="name" placeholder="2K23..."/>
+            <label>Recipient's name</label>
+            <input required type="text" name="recipient" placeholder="Sara..."/>
+            <label>Present's price</label>
+            <input required type="number" name="price" placeholder="60..."/>
+            <label>Present's picture</label>
+            <input required type="text" name="image" placeholder="https://..."/>
+            <label>What's this present about?</label>
+            <textarea required name="description" placeholder="This game is about..."></textarea>
+            <button type="submit">Add Present</button>
+          </form>
+      </div>
+    </div>
   </div>
-  <div>
+  <div class="down-arrow"></div>
+  <div class="presents-carroussel">
     {{#each presents}}
       {{>presentPartial this}}
     {{/each}}

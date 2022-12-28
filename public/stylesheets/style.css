@@ -40,8 +40,9 @@ body#presents-bg {
 }
 
 #presents-main {
-  display: block;
+  display: flex;
   text-align: center;
+
 }
 
 #presents-main h1 {
@@ -56,24 +57,60 @@ body#presents-bg {
   margin-bottom: 20px;
 }
 
+/* Present Form */
+
+.presents-form {
+	margin: 100px;
+	background-color: white;
+	padding: 40px;
+  width: 50%;
+}
+
+.presents-form h2{
+	color: darkred;
+}
+
+input[type="text"], input[type="number"], textarea{
+
+	width: 100%;
+	box-sizing: border-box;
+	margin: 15px 0px;
+	padding: 12px 20px;
+
+}
+
+button {
+	margin: 15px 0px;
+	padding: 20px;
+	font-size: 18px;
+	width: 100%;
+	background-color: darkred;
+	color: whitesmoke;
+	border: none;
+}
+
+
 /* presents CARDS */
+
+.presents-carroussel {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
 .present-card {
-  width: 75%;
+  width: 30%;
   position: relative;
   max-width: 800px;
   margin: auto;
   background: #fff;
   box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
-  padding: 22px;
+  padding: 20px;
   border-radius: 25px;
-  height: 280px;
+  height: 375px;
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
 }
-
-.present-card:first-child {
-  margin-top: 75px;
-  }
   
 .present-card:last-child {
 margin-bottom: 75px;
@@ -88,7 +125,7 @@ margin-bottom: 75px;
   box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
   padding: 22px;
   border-radius: 25px;
-  height: 400px;
+  height: 500px;
   display: flex;
   margin-top: 10px;
 }
@@ -104,6 +141,7 @@ margin-bottom: 75px;
 .present-card > img {
 display: block;
 margin: 0px 25px;
+width: auto;
 }
 
 .present-card:hover {
@@ -111,11 +149,13 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card-container-present {
-margin-top: 15px;
-padding: 0px 40px;
-width: 15vw;
-display: flex;
-justify-content: center;
+  padding: 40px 30px;
+}
+
+.card-container-present img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .card-container {
@@ -138,7 +178,7 @@ font-size: 16px;
 }
 
 #button-see-more > a {
-  background: #20c3a9;
+  background: darkred;
   color: #fff;
   padding: 15px 0px;
   margin-top: 40px;
@@ -181,13 +221,52 @@ header nav a {
   bottom: 0;
   width: 100%;
   background-color: white;
-  color: rgb(74, 18, 18);
+  color: darkred;
   text-align: center;
 }
 
 #footer a{
   font-size: 2vh;
   text-decoration: none;
-  color: rgb(99, 18, 18);
+  color: darkred;
   font-size: 30px;
 }
+
+/* Scroll Down */
+
+.down-arrow {
+  position: absolute;
+  top: calc(100vh - 60px);
+  left: calc(50% - 14px);
+  width: 0;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  animation: jumpInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
