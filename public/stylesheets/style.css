@@ -7,16 +7,22 @@
 
 /* HOME PAGE */
 body#home-bg {
-  background: url(../images/christmas.gif) fixed no-repeat;
-  background-size: 100%;
+  background: url(../images/christmas.gif) no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 48vh;
+  display: flex;
+  justify-content: center;
 }
 
 #menu-container {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 70%;
   float: right;
-  margin-top: 115px;
+  margin-top: 250px;
 }
 
 a#home-button {
@@ -169,3 +175,19 @@ header nav a {
   text-decoration: none;
   color: #1A1A1A;
 } 
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: rgb(74, 18, 18);
+  text-align: center;
+}
+
+#footer a{
+  font-size: 2vh;
+  text-decoration: none;
+  color: rgb(74, 18, 18);
+}
